@@ -1,0 +1,74 @@
+<!-- Navigation -->
+<ng-container *ngIf="isScreenSmall">
+    <fuse-vertical-navigation
+        class="bg-card print:hidden"
+        [mode]="'over'"
+        [name]="'mainNavigation'"
+        [navigation]="navigation.website"
+        [opened]="false">
+        <!-- Navigation header hook -->
+        <ng-container fuseVerticalNavigationContentHeader>
+            <ul class="justify-between mr-auto navbar-nav flex flex-row">
+                <li class="nav-item">
+                    <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 transition duration-150 ease-in-out" [routerLink]="['home']">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['club']">Notre club</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['actualites']">Actualité</a>
+                </li>
+                <li class="nav-item mb-2 lg:mb-0">
+                    <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['event']">Evénements</a>
+                </li>
+                <li class="nav-item mb-2 lg:mb-0">
+                    <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['contact']">Contact</a>
+                </li>
+            </ul>
+        </ng-container>
+    </fuse-vertical-navigation>
+</ng-container>
+    <!-- Section: Design Block -->
+    <section class="mb-5">
+        <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-screen justify-between">
+            <div class="px-6 w-screen flex flex-wrap items-center justify-start">
+                <div class="flex justify-center items-center ml-auto mr-12 mb-4">
+                    <a [routerLink]="['home']">
+                      <img class="w-28 h-20" src="assets/images/logo/logo-berville.webp" alt="logo du club">
+                    </a>
+                </div>
+                 <ng-container *ngIf="isScreenSmall">
+                     <button mat-icon-button (click)="toggleNavigation('mainNavigation')">
+                         <mat-icon [svgIcon]="'heroicons_outline:bars-3'"></mat-icon>
+                     </button>
+                 </ng-container>
+                <ng-container *ngIf="!isScreenSmall">
+                    <ul class="w-2/3 justify-between mr-auto ml-auto navbar-nav flex flex-row">
+                        <li class="nav-item">
+                            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 transition duration-150 ease-in-out" [routerLink]="['home']">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['club']">Notre club</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['actualites']">Actualité</a>
+                        </li>
+                        <li class="nav-item mb-2 lg:mb-0">
+                            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['event']">Evénements</a>
+                        </li>
+                        <li class="nav-item mb-2 lg:mb-0">
+                            <a class="nav-link block pr-2 lg:px-2 py-2 text-gray-600 hover:text-blue-700 focus:text-gray-700 transition duration-150 ease-in-out active:text-red-600" [routerLink]="['contact']">Contact</a>
+                        </li>
+                    </ul>
+                </ng-container>
+            </div>
+            <ng-container>
+                <button mat-button
+                        class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-full mr-10">
+                    Connexion
+                </button>
+            </ng-container>
+        </nav>
+    </section>
+    <!-- Section: Design Block -->
+
