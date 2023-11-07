@@ -100,6 +100,7 @@
     line-height: 1 !important;
 
     /* Large button */
+    /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
     &.fuse-mat-button-large {
         height: 48px;
         min-height: 48px;
@@ -272,30 +273,38 @@
 /* -------------------------------------------------------------------------- */
 /*  @ Button Toggle
 /* -------------------------------------------------------------------------- */
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
 .mat-button-toggle-group {
     border: none !important;
     @apply space-x-1;
-
+    /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+    /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
     &.mat-button-toggle-group-appearance-standard {
-
+        /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
         .mat-button-toggle + .mat-button-toggle {
             background-clip: padding-box;
         }
     }
-
+    /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+    /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+    /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
     .mat-button-toggle {
         border-radius: 9999px;
         overflow: hidden;
         border: none !important;
         font-weight: 500;
-
+        /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
+        /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
         &.mat-button-toggle-checked {
-
+            /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
             .mat-button-toggle-label-content {
                 @apply text-default #{'!important'};
             }
         }
-
+        /* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
         .mat-button-toggle-label-content {
             padding: 0 20px;
             line-height: 40px !important;
@@ -1129,7 +1138,7 @@
 
                 .mat-mdc-text-field-wrapper {
                     padding: 0 10px;
-
+                    /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
                     .mat-form-field-flex {
                         min-height: 32px;
                     }

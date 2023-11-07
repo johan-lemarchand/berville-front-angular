@@ -4,7 +4,6 @@ import { AuthGuard } from 'app/core/auth/guards/auth.guard';
 import { NoAuthGuard } from 'app/core/auth/guards/noAuth.guard';
 import { LayoutComponent } from 'app/layout/layout.component';
 import {LayoutWebsiteComponent} from "./layout/layout-website/layout-website.component";
-import {ClubComponent} from "./modules/website/club/club.component";
 
 // @formatter:off
 /* eslint-disable max-len */
@@ -32,7 +31,12 @@ export const appRoutes: Route[] = [
             {path: '', loadChildren: () => import('app/modules/website/actualites/actualites.routes')},
             {path: '', loadChildren: () => import('app/modules/website/event/event.routes')},
             {path: '', loadChildren: () => import('app/modules/website/home/home.routes')},
-            {path: '', loadChildren: () => import('app/modules/website/contact/contact.routes')}
+            {path: '', loadChildren: () => import('app/modules/website/contact/contact.routes')},
+            {path: 'sign-in', loadChildren: () => import('app/modules/auth/sign-in/sign-in.routes')},
+            {path: 'sign-up', loadChildren: () => import('app/modules/auth/sign-up/sign-up.routes')},
+            {path: 'forgot-password', loadChildren: () => import('app/modules/auth/forgot-password/forgot-password.routes')},
+            {path: 'confirmation-required', loadChildren: () => import('app/modules/auth/confirmation-required/confirmation-required.routes')},
+            {path: 'reset-password', loadChildren: () => import('app/modules/auth/reset-password/reset-password.routes')},
         ]
     },
 

@@ -7,7 +7,7 @@ import {FuseMediaWatcherService} from "../../../../@fuse/services/media-watcher"
 import {FuseNavigationService, FuseVerticalNavigationComponent} from "../../../../@fuse/components/navigation";
 import { Navigation } from 'app/core/navigation/navigation.types';
 import {NavigationService} from "../../../core/navigation/navigation.service";
-import {RouterLink, RouterOutlet} from "@angular/router";
+import {RouterLink, RouterOutlet, RouterLinkActive} from "@angular/router";
 
 @Component({
     selector: 'app-header',
@@ -22,6 +22,7 @@ import {RouterLink, RouterOutlet} from "@angular/router";
         FuseVerticalNavigationComponent,
         RouterLink,
         RouterOutlet,
+        RouterLinkActive,
     ]
 })
 

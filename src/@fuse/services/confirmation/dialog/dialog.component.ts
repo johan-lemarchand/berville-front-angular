@@ -10,20 +10,20 @@ import { FuseConfirmationConfig } from '@fuse/services/confirmation/confirmation
     templateUrl  : './dialog.component.html',
     styles       : [
         `
-            .fuse-confirmation-dialog-panel {
-
-                @screen md {
-                    @apply w-128;
-                }
-
-                .mat-mdc-dialog-container {
-
-                    .mat-mdc-dialog-surface {
-                        padding: 0 !important;
+                    .fuse-confirmation-dialog-panel {
+        
+                        @screen md {
+                            @apply w-128;
+                        }
+        
+                        .mat-mdc-dialog-container {
+        
+                            .mat-mdc-dialog-surface {
+                                padding: 0 !important;
+                            }
+                        }
                     }
-                }
-            }
-        `,
+                `,
     ],
     encapsulation: ViewEncapsulation.None,
     standalone   : true,

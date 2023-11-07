@@ -29,7 +29,7 @@ export class AuthSignUpComponent implements OnInit
         message: '',
     };
     signUpForm: UntypedFormGroup;
-    showAlert: boolean = false;
+    showAlert = false;
 
     /**
      * Constructor
@@ -56,8 +56,6 @@ export class AuthSignUpComponent implements OnInit
                 name      : ['', Validators.required],
                 email     : ['', [Validators.required, Validators.email]],
                 password  : ['', Validators.required],
-                company   : [''],
-                agreements: ['', Validators.requiredTrue],
             },
         );
     }
@@ -102,7 +100,7 @@ export class AuthSignUpComponent implements OnInit
                     // Set the alert
                     this.alert = {
                         type   : 'error',
-                        message: 'Something went wrong, please try again.',
+                        message: 'Une erreur s\'est produite. Veuillez réessayer.',
                     };
 
                     // Show the alert

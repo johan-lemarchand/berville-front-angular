@@ -29,7 +29,7 @@ export class AuthSignInComponent implements OnInit
         message: '',
     };
     signInForm: UntypedFormGroup;
-    showAlert: boolean = false;
+    showAlert = false;
 
     /**
      * Constructor
@@ -86,10 +86,6 @@ export class AuthSignInComponent implements OnInit
             .subscribe(
                 () =>
                 {
-                    // Set the redirect url.
-                    // The '/signed-in-redirect' is a dummy url to catch the request and redirect the user
-                    // to the correct page after a successful sign in. This way, that url can be set via
-                    // routing file and we don't have to touch here.
                     const redirectURL = this._activatedRoute.snapshot.queryParamMap.get('redirectURL') || '/signed-in-redirect';
 
                     // Navigate to the redirect url
@@ -107,7 +103,7 @@ export class AuthSignInComponent implements OnInit
                     // Set the alert
                     this.alert = {
                         type   : 'error',
-                        message: 'Wrong email or password',
+                        message: 'Email ou mot de passe incorrect',
                     };
 
                     // Show the alert
